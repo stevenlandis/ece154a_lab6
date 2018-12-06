@@ -57,7 +57,7 @@ int get_cache_assoc(int size) {
         // check previous cache hits to see when overwritten
         for (int j = 0; j < i; j += size) {
             if (!access_cache(j)) {
-                return 1/size;
+                return i/size;
             }
         }
 
