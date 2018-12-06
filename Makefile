@@ -2,9 +2,9 @@
 # TEST_CACHE = cache_32c_8a_8b.o
 # TEST_CACHE = cache_64c_2a_16b.o
 
-ifndef TEST_CACHE
-$(error You did not define TEST_CACHE!)
-endif
+# ifndef TEST_CACHE
+# $(error You did not define TEST_CACHE!)
+# endif
 
 all:
 	gcc -Wall -m32 cache-test-skel.c cache_16c_4a_4b.o -o t1
