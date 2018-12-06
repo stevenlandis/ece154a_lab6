@@ -30,15 +30,20 @@ mystery2:
 int get_cache_size(int block_size) {
     /* YOUR CODE GOES HERE */
     int i = 0;
+    int size = 2*block_size;
     while (1) {
         access_cache(i);
 
-        // check previous cache hits to see when overwritten
-        for (int j = 0; j < i; j += block_size) {
-            if (!access_cache(j)) {
-                return i;
+        if (i > size) {
+            // check previous cache hits to see when overwritten
+            for (int j = 0; j < i; j += block_size) {
+                if (!access_cache(j)) {
+                    return i;
+                }
             }
+            size *= 2;
         }
+        
 
         i += block_size;
     }
