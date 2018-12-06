@@ -1,22 +1,21 @@
 /*
 Steven Landis
 ECE 154A - Fall 2018
-Lab 2 - Mystery Caches
-Due: 12/3/12, 11:00 pm
+Lab 6 - Mystery Caches
 
 Mystery Cache Geometries:
 mystery0:
-        block size = 
-        cache size = 
-        associativity = 
+        block size = 64 bytes
+        cache size = 4194304 bytes
+        associativity = 16
 mystery1:
-        block size = 
-        cache size = 
-        associativity = 
+        block size = 4 bytes
+        cache size = 4096 bytes
+        associativity = 1
 mystery2:
-        block size = 
-        cache size = 
-        associativity = 
+        block size = 32 bytes
+        cache size = 4096 bytes
+        associativity = 128
 */
 
 #include <stdlib.h>
