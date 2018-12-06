@@ -38,7 +38,7 @@ int get_cache_size(int block_size) {
             // check previous cache hits to see when overwritten
             for (int j = 0; j < i; j += block_size) {
                 if (!access_cache(j)) {
-                    return i;
+                    return i-block_size;
                 }
             }
             size *= 2;
