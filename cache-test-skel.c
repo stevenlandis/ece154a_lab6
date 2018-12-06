@@ -91,13 +91,12 @@ int main(void) {
     cache_init(0,0);
     
     block_size = get_block_size();
-    size = get_cache_size(block_size);
-    assoc = get_cache_assoc(size);
-
-
-    printf("Cache size: %d bytes\n",size);
-    printf("Cache associativity: %d\n",assoc);
     printf("Cache block size: %d bytes\n",block_size);
+    size = get_cache_size(block_size);
+    printf("Cache size: %d bytes\n",size);
+    assoc = get_cache_assoc(size);
+    printf("Cache associativity: %d\n",assoc);
+    
     
     return EXIT_SUCCESS;
 }
