@@ -51,7 +51,6 @@ int get_cache_size(int block_size) {
 int get_cache_assoc(int size) {
     // test for cache associacivity:
     int i = 0;
-    int assoc = 0;
     while (1) {
         access_cache(i);
 
